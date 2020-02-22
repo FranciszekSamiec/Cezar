@@ -52,10 +52,10 @@ poprawnym wynikiem jest:
 
 W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tree). Węzeł reprezentuje żołnierza a porządek infiksowy na drzewie wyznacza kolejność żołnierzy (operacje splay na drzewie nie zaburzają tego porządku). Każdy węzeł podsumowuje informacje zawarte w poddrzewie tego węzła (które to opisuje pewien przedział zołnierzy).  
 
-     4
-    / \
-   2   5
-  / \
+     4  
+    / \  
+   2   5  
+  / \  
  1 
 
 Ponadto każdy węzeł zawiera informacje ile jest poprawnych ciągów żołnierzy kończących się na R/G i zaczynajcych się na R/G w danym segmencie opisywanym przez 
