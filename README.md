@@ -48,5 +48,7 @@ poprawnym wynikiem jest:
 6  
 5  
 
+## Rozwiązanie
 
+W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tree).
 
