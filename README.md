@@ -37,13 +37,16 @@ zaufania patrolu z żołnierzy z zadanego przedziału. Jako że odpowiedź może
 
 ## Przykład
 
-Dla danych wejściowych:                                  poprawnym wynikiem jest:
-3 3                                                      6
-GRG                                                      5
-? 1 3
-O 1 2
-? 1 3
+Dla danych wejściowych:  
+3 3  
+GRG  
+? 1 3  
+O 1 2  
+? 1 3  
 
+poprawnym wynikiem jest:  
+6  
+5  
 
 
 
