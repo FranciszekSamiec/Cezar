@@ -3,8 +3,18 @@
 
 using namespace std;
 
+// Results may be big so we need to divide them modulo.
 static const long long mod = 1000000000 + 7;
 
+// Key is only for ease of operation insert. Reverse bit is a flag
+// which tells us whether segment represented by subtree is reversed 
+// or not. Left and Right desc means number of descendants, we use that
+// info too keep track of order of elements (we cannot simply keep info 
+// like index because segments are going to be reversed). RR, RG and so 
+// on are the numbers of segments represented by the subtree which start 
+// with R or G and end with R or G for instance RR is the number of 
+// proper sequnces in the subtree which start and end with R. Nationality 
+// means the nationality of a node: R for Roman ang G for Gaul.
 class node
 {
 public:
@@ -339,15 +349,11 @@ int main()
 	while (count <= n)
 	{
 		char l;
-
 		cin >> l;
-
 		root = insert(root, count, l);
-
-
 		count++;
 	}
-
+	
 	setDesc(root);
 	setRRs(root);
 	count = m;
@@ -357,7 +363,6 @@ int main()
 		cin >> questionType;
 
 		int a, b;
-
 		cin >> a;
 		cin >> b;
 
