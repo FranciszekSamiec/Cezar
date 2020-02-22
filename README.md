@@ -10,6 +10,7 @@ dotychczasową kolejność.
 - ? i j - polecenie typu ? - oblicz, na ile sposobów można wybrać godny zaufania patrol spośród żołnierzy
 pomiędzy i-tym a j-tym włącznie. Jako że liczba sposobów może być bardzo duża, Cezarowi wystarczy
 tylko wynik modulo 109 + 7.
+
 Każdy rzymski legionista (’R’) jest godny zaufania. A przynajmniej tak musisz założyć. Jednak niestety, oprócz
 Rzymian, Twój oddział zawiera także galijskich sojuszników z północy (’G’). O ile Galowie są podstępni, to w
 otoczeniu legionistów są raczej niegroźni. Zatem warunkiem na to, by patrol był godny zaufania, jest to, by
@@ -42,7 +43,7 @@ GRG
 ? 1 3
 O 1 2
 ? 1 3
-
 poprawnym wynikiem jest:
 6
 5
+
