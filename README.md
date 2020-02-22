@@ -50,5 +50,6 @@ poprawnym wynikiem jest:
 
 ## Rozwiązanie
 
-W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tree).
+W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tree). Węzeł reprezentuje żołnierza a porządek infiksowy na drzewie wyznacza kolejność żołnierzy (operacje splay na drzewie nie zaburzają tego porządku). Każdy węzeł podsumowuje informacje zawarte w poddrzewie tego węzła (które to opisuje pewien przedział zołnierzy).
+![TREE R 1 N 2 F 3 F 4 F 5]!
 
