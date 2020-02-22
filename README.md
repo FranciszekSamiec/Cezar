@@ -7,7 +7,7 @@ poszukiwaniu jedzenia.
 żołnierzy - na rozkaz wskazani żołnierze występują z głównego szeregu i ustawiają się w nowy, zachowując
 dotychczasową kolejność.
   Cezar przechadza się wzdłuż szeregu i wydaje Ci polecenia:
-- ? i j - polecenie typu ? - oblicz, na ile sposobów można wybrać godny zaufania patrol spośród żołnierzy
+- `? i j` - polecenie typu ? - oblicz, na ile sposobów można wybrać godny zaufania patrol spośród żołnierzy
 pomiędzy i-tym a j-tym włącznie. Jako że liczba sposobów może być bardzo duża, Cezarowi wystarczy
 tylko wynik modulo 109 + 7.
 
@@ -19,7 +19,7 @@ czyli dziel i rządź. Jako że rządzenie powinno polegać na łączeniu, to w 
   Cezar wie, że nie może tasować Galów zupełnie bezkarnie. By korzystnie przebudować szereg i uniknąć
 podejrzeń o dyskryminację (co mogłoby go narazić na bunt galijskich sojuszników, albo, co gorsza, wizytę
 z rzymskiego HRu), Cezar postanowił, że będzie operował na szeregu używając następującego, etnicznieneutralnego rozkazu:
-- O i j - polecenie typu O - odwróć kolejność żołnierzy między i-tym, a j-tym włącznie.
+- `O i j` - polecenie typu O - odwróć kolejność żołnierzy między i-tym, a j-tym włącznie.
 Dzięki temu poleceniu Cezar będzie mógł osiągnąć dowolną zaplanowaną przez siebie kolejność w szeregu.
   
  ## Wejście
