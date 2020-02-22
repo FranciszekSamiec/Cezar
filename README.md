@@ -54,6 +54,9 @@ W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tr
 
      4
     / \
+   2   5
+  / \
+ 1 
 
 Ponadto każdy węzeł zawiera informacje ile jest poprawnych ciągów żołnierzy kończących się na R/G i zaczynajcych się na R/G w danym segmencie opisywanym przez 
 
