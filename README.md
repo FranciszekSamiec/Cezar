@@ -70,7 +70,10 @@ Mamy następujące drzewo:
   [G,2]    [G,5]
    /        / \
 [R,1]   [R,4] [R,6]
-Dla uproszczenia wszystkie flagi reverse są równe 0, indexy (zgodnie z porządkiem infiksowym) są wykorzystywane tylko na początku przy budowie drzewa kiedy nie ma jeszcze ilości lewych i prawych potomków, pokazują one wyraźnie porządek infiksowy - kolejność żołnierzy oraz zachowanie operacji splay przy wykonaniu zapytania typu "?".
+Dla uproszczenia wszystkie flagi reverse są równe 0, indexy (zgodnie z porządkiem infiksowym)  
+są wykorzystywane tylko na początku przy budowie drzewa kiedy nie ma jeszcze ilości lewych i   
+prawych potomków, pokazują one wyraźnie porządek infiksowy - kolejność żołnierzy oraz zachowanie  
+operacji splay przy wykonaniu zapytania typu "?".  
 ```
 Przykład wykoniania zapytania ? 2 4
 ```text
