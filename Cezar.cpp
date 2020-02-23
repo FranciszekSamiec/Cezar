@@ -281,14 +281,6 @@ int setDesc(node* root) {
 	}
 }
 
-void setRRs(node* n) {
-	if (n != NULL) {
-
-		setRRs(n->left);
-		setRRs(n->right);
-	}
-}
-
 node* subStrings(node* n, int a, int b) {
 	node* root = splay(n, a);
 	node* leftTree = root->left;
@@ -355,7 +347,6 @@ int main()
 	}
 	
 	setDesc(root);
-	setRRs(root);
 	count = m;
 
 	while (count > 0) {
