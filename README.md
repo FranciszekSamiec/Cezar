@@ -75,7 +75,7 @@ są wykorzystywane tylko na początku przy budowie drzewa kiedy nie ma jeszcze i
 prawych potomków, pokazują one wyraźnie porządek infiksowy - kolejność żołnierzy oraz zachowanie  
 operacji splay przy wykonaniu zapytania typu "?".  
 ```
-Przykład wykoniania zapytania ? 2 4
+Przykład wykonania zapytania ? 2 4
 ```text
 pierwszy splay i odcięcie lewego poddrzewa:
       [G,2]                    [G,2]
@@ -85,7 +85,7 @@ pierwszy splay i odcięcie lewego poddrzewa:
             [G,5]                   [G,5]
             /   \                   /   \
          [R,4] [R,6]             [R,4] [R,6]
-splay 4 elementui odcięcie prawego poddrzewa:
+splay 4 elementu i odcięcie prawego poddrzewa:
      [R,4]                     [R,4]
     /     \                    /
   [G,2]  [G,5]   ------->   [G,2]
