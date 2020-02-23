@@ -65,28 +65,30 @@ W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tr
   
 Mamy następujące drzewo:
 ```text
-      G
-     / \
-    G   G
-   /   / \
-  R   R   R
-[narodowosc, index]
-Dla uproszczenia wszystkie flagi reverse są równe 0, indexy są wykorzystywane tylko na początku przy budowie drzewa kiedy nie ma jeszcze
-ilości lewych i prawych potomków, pokazują one wyraźnie porządek infiksowy - kolejność żołnierzy oraz zachowanie operacji splay przy wykonaniu zapytania typu "?".
+       [G,3]
+      /     \
+  [G,2]    [G,5]
+   /        / \
+[R,1]   [R,4] [R,6]
+Dla uproszczenia wszystkie flagi reverse są równe 0, indexy (zgodnie z porządkiem infiksowym) są wykorzystywane tylko na początku przy budowie drzewa kiedy nie ma jeszcze ilości lewych i prawych potomków, pokazują one wyraźnie porządek infiksowy - kolejność żołnierzy oraz zachowanie operacji splay przy wykonaniu zapytania typu "?".
 ```
 Przykład wykoniania zapytania ? 2 4
 ```text
-pierwszy **splay**:
-     G
-    / \
-   R   G
-        \  
-         G
-        / \
-       R   R
-odcięcie lewego i splay 4 elementu:
-     R
-    / \
-   G   G
-    \   \
-     G   R
+pierwszy splay i odcięcie lewego poddrzewa:
+      [G,2]                    [G,2]
+      /   \                       \
+   [R,1]  [G,3]                   [G,3]
+             \          ------>      \
+            [G,5]                   [G,5]
+            /   \                   /   \
+         [R,4] [R,6]             [R,4] [R,6]
+splay 4 elementui odcięcie prawego poddrzewa:
+     [R,4]                     [R,4]
+    /     \                    /
+  [G,2]  [G,5]   ------->   [G,2]
+    \       \                  \
+    [G,3]   [R,6]              [G,3]
+ ```
+ Teraz w korzeniu ostatniego drzewa [R,4]  mamy wszystkie informacje opisujące fragment [2, 4], nie musimy schodzić niżej. Analogicznie łączymy te drzewa aktualizując informacje. 
+ 
+ 
