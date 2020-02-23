@@ -38,16 +38,18 @@ zaufania patrolu z żołnierzy z zadanego przedziału. Jako że odpowiedź może
 ## Przykład
 
 Dla danych wejściowych:  
+```text
 3 3  
 GRG  
 ? 1 3  
 O 1 2  
 ? 1 3  
-
+```
 poprawnym wynikiem jest:  
+```text
 6  
 5  
-
+```
 ## Rozwiązanie
 
 W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tree). Węzeł reprezentuje żołnierza a porządek infiksowy na drzewie wyznacza kolejność żołnierzy (operacje splay na drzewie nie zaburzają tego porządku). Każdy węzeł podsumowuje informacje zawarte w poddrzewie tego węzła (które to opisuje pewien przedział zołnierzy). Na przykład w poniższym drzewie korzeń opisuje przedział [1, 5] natomiast węzeł 2 opisuje przedział [1, 3]. 
@@ -58,5 +60,5 @@ W rozwiązaniu korzystam z drzewa [splay](https://en.wikipedia.org/wiki/Splay_tr
   / \  
  1   3  `
 ```
-Ponadto każdy węzeł zawiera informacje ile jest poprawnych ciągów żołnierzy kończących się na R/G i zaczynajcych się na R/G w danym segmencie (opisywanym przez ten węzeł). Dodatkowo każdy węzeł wie ile ma lewych i prawych potomków po to żeby utrzymać porządek. Numeracja nie zadziałałaby gdyż dopuszczamy operacje odwracania. Szukamy tak jak w drzewie BST. operacja splay(n, x) znajduje nam wierzcholek x w poddrzewie z korzeniem n i wykonuje odpowiednie rotacje przemieszczajac wierzcholek x do korzenia (x jest nowym korzeniem). Mamy jeszcze flage w każdym węźle, która mówi czy segment opisywany przez poddrzewo jest odwrócony czy nie. Jeżeli więc chcielibyśmy zapytać ile jest poprawnych ciągów z szeregu [2, 4] to najpierw wykonujemy splay(n,2) (n - korzeń całego drzewa) potem odcinamy lewe poddrzewo, następnie robimy splay(2, 4) (szukamy w prawym poddrzewie 4 i "spleujujemy" go) odcinamy prawe poddrzewo i w korzeniu tego już środkowego drzewa jest interesująca nas informacja. Po odczytaniu informacji łączymy wszystkie drzewa. Przy operacji splay należy aktualizować wszystkie informacje o czym później.
+Ponadto każdy węzeł zawiera informacje ile jest poprawnych ciągów żołnierzy kończących się na R/G i zaczynajcych się na R/G w danym segmencie (opisywanym przez ten węzeł). Dodatkowo każdy węzeł wie ile ma lewych i prawych potomków po to żeby utrzymać porządek. Numeracja nie zadziałałaby gdyż dopuszczamy operacje odwracania. Szukamy tak jak w drzewie BST. operacja splay(n, x) znajduje nam wierzcholek x w poddrzewie z korzeniem n i wykonuje odpowiednie rotacje przemieszczajac wierzcholek x do korzenia (x jest nowym korzeniem). Mamy jeszcze flage w każdym węźle, która mówi czy segment opisywany przez poddrzewo jest odwrócony czy nie. Jeżeli więc chcielibyśmy zapytać ile jest poprawnych ciągów z szeregu [2, 4] to najpierw wykonujemy splay(n,2) (n - korzeń całego drzewa) potem odcinamy lewe poddrzewo, następnie robimy splay(n, 4) (szukamy w prawym poddrzewie 4 i "spleujujemy" go) odcinamy prawe poddrzewo i w korzeniu tego już środkowego drzewa jest interesująca nas informacja. Po odczytaniu informacji łączymy wszystkie drzewa. Przy operacji splay należy aktualizować wszystkie informacje o czym później.
 
